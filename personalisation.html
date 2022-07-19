@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personnalisation</title>
+    <link rel="stylesheet" href="assets/CSS/perso-style.css">
+    <link rel="stylesheet" href="assets/CSS/style-header.css">
+    <link rel="stylesheet" href="assets/CSS/style-footer.css">
+    <script defer src="assets/js/fetch-hs&f.js"></script>
+    <script defer src="assets/js/perso-js.js"></script>
+    <script defer src="assets/js/calculPrice.js"></script>
+    <script defer src="assets/js/startAllPage.js"></script>
+</head>
+
+<body>
+    <header id="headersimple"></header>
+    <style id="background"></style>
+    <h1 id="title">PERSONNALISATION</h1>
+    <hr>
+    <div class="container">
+        <canvas id="canvas" class="image" width="330px" height="340px"></canvas>
+
+        <div class="elementRight">
+            <div class="personnalisation">
+                <button class="button button--hyperion" onclick="openPage('skin', this)" id="skinBtn"><span><span>Peau</span></span></button>
+                <button class="button button--hyperion" onclick="openPage('hair', this)" id="hairBtn"><span><span>Cheveux</span></span></button>
+                <button class="button button--hyperion" onclick="openPage('eyes', this)" id="eyesBtn"><span><span>Yeux</span></span></button>
+                <button class="button button--hyperion" onclick="openPage('top', this)" id="topBtn"><span><span>Haut</span></span></button>
+                <button class="button button--hyperion" onclick="openPage('pants', this)" id="pantsBtn"><span><span>Bas</span></span></button>
+                <button class="button button--hyperion" onclick="openPage('shoes', this)" id="shoesBtn"><span><span>Chaussures</span></span></button>
+
+                <div id="skin" class="tabcontent">
+                    <p class="description" id="skinText">Choisis l'aspect de la peau :</p>
+                    <button class="cercle skin" id="skin--1" onclick="colorSkin(1)"></button>
+                    <button class="cercle skin" id="skin--2" onclick="colorSkin(2)"></button>
+                    <button class="cercle skin" id="skin--3" onclick="colorSkin(3)"></button>
+                    <button class="cercle skin" id="skin--4" onclick="colorSkin(4)"></button>
+                    <button class="cercle skin" id="skin--5" onclick="colorSkin(5)"></button>
+                </div>
+                <div id="hair" class="tabcontent">
+                    <p class="description" id="hairText">Choisis la couleur des cheveux :</p>
+                    <button class="cercle hair" id="hair--1" onclick="colorHair(1)"></button>
+                    <button class="cercle hair" id="hair--2" onclick="colorHair(2)"></button>
+                    <button class="cercle hair" id="hair--3" onclick="colorHair(3)"></button>
+                    <button class="cercle hair" id="hair--4" onclick="colorHair(4)"></button>
+                    <button class="cercle hair" id="hair--5" onclick="colorHair(5)"></button>
+
+                </div>
+                <div id="eyes" class="tabcontent">
+                    <p class="incoming">DISPONIBLE BIENTÔT</p>
+                    <p class="description" id="eyesText">Choisis la couleur des yeux :</p>
+                    <button class="cercleDisable eyes" id="eyes--1" onclick="colorEyes(1)"></button>
+                    <button class="cercleDisable eyes" id="eyes--2" onclick="colorEyes(2)"></button>
+                    <button class="cercleDisable eyes" id="eyes--3" onclick="colorEyes(3)"></button>
+                    <button class="cercleDisable eyes" id="eyes--4" onclick="colorEyes(4)"></button>
+
+                </div>
+                <div id="top" class="tabcontent">
+                    <p class="incoming">DISPONIBLE BIENTÔT</p>
+                    <p class="description" id="topText">Choisis l'aspect du haut !</p>
+                    <button class="cercleDisable top" id="top--1" onclick="colorTop(1)"></button>
+                    <button class="cercleDisable top" id="top--2" onclick="colorTop(2)"></button>
+
+                </div>
+                <div id="pants" class="tabcontent">
+                    <p class="incoming">DISPONIBLE BIENTÔT</p>
+                    <p class="description" id="pantsText">Choisis l'aspect des bas !</p>
+                    <button class="cercleDisable pants" id="pants--1" onclick="colorPants(1)"></button>
+                    <button class="cercleDisable pants" id="pants--2" onclick="colorPants(2)"></button>
+
+                </div>
+                <div id="shoes" class="tabcontent">
+                    <p class="incoming">DISPONIBLE BIENTÔT</p>
+                    <p class="description" id="shoesText">Choisis l'aspect des chaussures !</p>
+                    <button class="cercleDisable shoes" id="shoes--1" onclick="colorShoes(1)"></button>
+                    <button class="cercleDisable shoes" id="shoes--2" onclick="colorShoes(2)"></button>
+
+                </div>
+            </div>
+            <div class="bottomButton">
+                <div>
+                    <button class="button button--hyperion" onclick="cancelAll()"><span><span>Annuler</span></span></button>
+                </div>
+                <div>
+                    <button class="button button--hyperion" onclick="validation()"><span><span>Valider</span></span></button>
+                </div>
+                <div id="popup1" class="overlay">
+                    <div class="popup">
+                        <h2>Validation</h2>
+                        <a class="close" href="products.html">&times;</a>
+                        <div class="content">
+                            Votre figurine a été ajoutée au panier.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="price">
+                <p class="cst">Prix&nbsp;:&nbsp;</p>
+                <hr>
+                <p class="var" id="price">#</p>
+            </div>
+
+        </div>
+    </div>
+    <footer id="footer"></footer>
+
+</body>
+
+</html>

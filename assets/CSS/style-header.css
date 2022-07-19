@@ -1,0 +1,166 @@
+header {
+    background: no-repeat center/100% url("../../Images/img-b&w-wild.avif");
+    overflow: auto;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+}
+
+h1 a {
+    color: black;
+    font-family: Purisa;
+    font-size: 70px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    font-family: Arial;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 18px;
+}
+
+.button {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #e7e7e7;
+    border: none;
+    padding: 1.5rem 3rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+}
+
+.button::before,
+.button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.button--hyperion {
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    overflow: hidden;
+    color: #fff;
+}
+
+.button--hyperion span {
+    display: block;
+    position: relative;
+}
+
+.button--hyperion>span {
+    overflow: hidden;
+}
+
+.button--hyperion>span>span {
+    overflow: hidden;
+    mix-blend-mode: difference;
+}
+
+.button--hyperion:hover>span>span {
+    animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+}
+
+@keyframes MoveUpInitial {
+    to {
+        transform: translate3d(0, -105%, 0);
+    }
+}
+
+@keyframes MoveUpEnd {
+    from {
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.button--hyperion::before {
+    content: "";
+    background: #000;
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+    transform-origin: 100% 50%;
+}
+
+.button--hyperion:hover::before {
+    transform: scale3d(0, 1, 1);
+    transform-origin: 0% 50%;
+}
+
+.button--hyperion:focus::before {
+    background: whitesmoke;
+}
+
+.button--hyperion:focus {
+    outline: 0;
+}
+
+
+/*permet d'enlever le fait que le text soit surligné
+sachant qu'il est soumis a un effet et qu'il existe
+l'element before et l'element after*/
+
+.button--hyperion {
+    text-decoration: none;
+}
+
+
+/*s'occupe du sticky button (récupéré sur W3School)*/
+
+#boutonRetour {
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+}
+
+#boutonRetour img {
+    width: 65px;
+    height: auto;
+}
+
+#boutonRetour:hover {
+    opacity: 0.85;
+    transition: 0.2s;
+    /* Add a dark-grey background on hover */
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits</title>
+    <link rel="stylesheet" href="assets/CSS/products-style.css">
+    <link rel="stylesheet" href="assets/CSS/style-header.css">
+    <link rel="stylesheet" href="assets/CSS/style-footer.css">
+    <script defer src="assets/js/products-js.js"></script>
+    <script defer src="assets/js/fetch-hs&f.js"></script>
+    <script defer src="assets/js/accueil-js.js"></script>
+    <script defer src="assets/js/startAllPage.js"></script>
+</head>
+
+<body>
+    <header id="headersimple"></header>
+    <style id="background"></style>
+
+    <!-- Side nav -->
+    <div id="sideBar" class="sideBar">
+        <h4>Récapitulatif&nbsp;Panier</h4>
+        <h3 id="flexcontainerCommande">
+            erreur de chargement
+        </h3>
+        <template id="listeCommande">
+            <span>{{nom}}</br></span>
+        </template>
+        <h4>Total :</h4>
+        <h4 id="totalPrice"></h4>
+        <a href="panier_commande.html">Commander</a>
+    </div>
+
+    <div id="main">
+        <button id="openbtn" class="openbtn" onclick="openCloseNav()">&lt;</button>
+
+        <h1>PRODUITS</h1>
+        <hr>
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')">Voir tout</button>
+            <button class="btn" onclick="filterSelection('women')">Féminin</button>
+            <button class="btn" onclick="filterSelection('man')">Masculin</button>
+            <button class="btn" onclick="filterSelection('other')">Autres</button>
+        </div>
+
+        <!-- Products Gallery Grid -->
+        <ul>
+            <li class="column women">
+                <div class="content">
+                    <a href="personalisation.html?id=0"><img src="Images/womandiy-white-background.png" alt="Woman DIY"></a>
+                    <a href="personalisation.html?id=0">
+                        <h4>Axel</h4>
+                    </a>
+                    <p>Prix : 39.99€</p>
+                </div>
+            </li>
+            <li class="column women">
+                <div class="content">
+                    <a href="personalisation.html?id=1"><img src="Images/bopeepdiy.png" alt="bopeepdiy"></a>
+                    <a href="personalisation.html?id=1">
+                        <h4>La Bergère</h4>
+                    </a>
+                    <p>Prix : 44.99€</p>
+                </div>
+            </li>
+            <li class="column man">
+                <div class="content">
+                    <a href="personalisation.html?id=2"><img src="Images/mendiy-white-background.png" alt="mendiy"></a>
+                    <a href="personalisation.html?id=2">
+                        <h4>Gaël</h4>
+                    </a>
+                    <p>Prix : 39.99€</p>
+                </div>
+            </li>
+            <li class="column other">
+                <div class="content">
+                    <a href="personalisation.html?id=3"><img src="Images/warhammer.png" alt="warhammer diy"></a>
+                    <a href="personalisation.html?id=3">
+                        <h4>Soldat</h4>
+                    </a>
+                    <p>Prix : 49.99€</p>
+                </div>
+            </li>
+            <li class="column other">
+                <div class="content">
+                    <a href="personalisation.html?id=4"><img src="Images/bibendum-origine-diy.png" alt="bibendum-origine-diy"></a>
+                    <a href="personalisation.html?id=4">
+                        <h4>Bibendum</h4>
+                    </a>
+                    <p>Prix : 44.99€</p>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <footer id="footer"></footer>
+
+</body>
+
+</html>

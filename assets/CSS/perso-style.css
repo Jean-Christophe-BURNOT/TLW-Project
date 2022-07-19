@@ -1,0 +1,362 @@
+/* Style page content */
+
+body,
+html {
+    height: 100%;
+    font-family: Arial;
+    min-width: 1100px;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 2px;
+    margin: 16px;
+}
+
+.image {
+    width: 25%;
+    border-radius: 3%;
+}
+
+.elementRight {
+    width: 75%;
+    padding-left: 20px;
+}
+
+.incoming {
+    font-size: 8mm;
+    color: red;
+    margin: 0;
+}
+
+.cercleDisable {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.cercle {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.cercle:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.description {
+    color: white;
+    text-shadow: black 0 0 0.16em;
+    font-weight: bold;
+}
+
+#skin--1 {
+    background: rgb(255, 0, 0);
+    /* background: #8d5524; */
+}
+
+#skin--2 {
+    background: rgb(0, 255, 0);
+    /* background: #c68642; */
+}
+
+#skin--3 {
+    background: rgb(0, 0, 255);
+    /* background: #e0ac69; */
+}
+
+#skin--4 {
+    background: rgb(0, 255, 255);
+    /* background: #f1c27d; */
+}
+
+#skin--5 {
+    background: rgb(255, 255, 255);
+    /* background: #f1c27d; */
+}
+
+#hair--1 {
+    background: rgb(255, 0, 0);
+    /* background: #090806; */
+}
+
+#hair--2 {
+    background: rgb(0, 255, 0);
+    /* background: #533d32; */
+}
+
+#hair--3 {
+    background: rgb(0, 0, 255);
+    /* background: #a7856a; */
+}
+
+#hair--4 {
+    background: rgb(0, 255, 255);
+    /* background: #b55239; */
+}
+
+#hair--5 {
+    background: rgb(255, 255, 255);
+    /* background: #b55239; */
+}
+
+#eyes--1 {
+    background: #070b18;
+}
+
+#eyes--2 {
+    background: #8d9b87;
+}
+
+#eyes--3 {
+    background: #0d98ba;
+}
+
+#eyes--4 {
+    background: #784221;
+}
+
+#top--1 {
+    background: red;
+}
+
+#top--2 {
+    background: blue;
+}
+
+#pants--1 {
+    background: beige;
+}
+
+#pants--2 {
+    background: black;
+}
+
+#shoes--1 {
+    background: brown;
+}
+
+#shoes--2 {
+    background: blue;
+}
+
+.price {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 135px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 8%;
+    min-width: 80px;
+    border-radius: 6px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.cst {
+    margin-top: 7px;
+    margin-left: 7px;
+    margin-bottom: 0px;
+}
+
+.price hr {
+    margin-right: 7px;
+    margin-left: 7px;
+    color: rgba(50, 50, 93, 0.25);
+}
+
+.var {
+    text-align: right;
+    margin-top: 0px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Style tab links */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 18px;
+}
+
+.button {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #e7e7e7;
+    border: none;
+    padding: 1.5rem 3rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+}
+
+.button::before,
+.button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.button--hyperion {
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    border: 1px solid #000;
+    overflow: hidden;
+    color: #fff;
+}
+
+.button--hyperion span {
+    display: block;
+    position: relative;
+}
+
+.button--hyperion>span {
+    overflow: hidden;
+}
+
+.button--hyperion>span>span {
+    overflow: hidden;
+    mix-blend-mode: difference;
+}
+
+.button--hyperion:hover>span>span {
+    animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+}
+
+@keyframes MoveUpInitial {
+    to {
+        transform: translate3d(0, -105%, 0);
+    }
+}
+
+@keyframes MoveUpEnd {
+    from {
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.button--hyperion::before {
+    content: "";
+    background: #000;
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+    transform-origin: 100% 50%;
+}
+
+.button--hyperion:hover::before {
+    transform: scale3d(0, 1, 1);
+    transform-origin: 0% 50%;
+}
+
+.button--hyperion:focus::before {
+    background: whitesmoke;
+}
+
+.button--hyperion:focus {
+    outline: 0;
+}
+
+.bottomButton {
+    display: flex;
+    justify-content: left;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: #06D85F;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+    .box {
+        width: 70%;
+    }
+    .popup {
+        width: 70%;
+    }
+}
+
+
+/* Style the tab content (and add height:100% for full page content) */
+
+.tabcontent {
+    color: black;
+    display: none;
+    padding: 80px 20px;
+    height: 100%;
+}

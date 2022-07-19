@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/CSS/style-header.css">
+    <link rel="stylesheet" href="assets/CSS/style-footer.css">
+    <link rel="stylesheet" href="assets/CSS/styles-panier-index.css">
+    <script defer src="assets/js/panier.js"></script>
+    <script defer src="assets/js/accueil-js.js"></script>
+    <script defer src="assets/js/fetch-hs&f.js"></script>
+    <script defer src="assets/js/products-js.js"></script>
+    <script defer src="assets/js/startAllPage.js"></script>
+</head>
+
+<body id="PanierTotal">
+    <style id="background"></style>
+    <header id="headersimple"></header>
+    <!--Formulaire avec bountons pour commander-->
+    <h3 class="Titre1">Formulaire de Commande</h3>
+    <div class="Panier">
+        <!--<form action="/action_page.php" method="GET">-->
+        Nom :<br>
+        <input class="Taper-le-texte" type="text" name="lastname" value=""><br> Prénom :<br>
+        <input class="Taper-le-texte" type="text" name="firstname" value=""><br> Adresse mail :<br>
+        <input class="Taper-le-texte" type="text" name="email" value=""><br> Adresse de livraison :<br>
+
+        <input class="Taper-le-texte" id="adressLivraison" type="text" name="adress" value=""><br><br>
+        <p>Prix Livraison: </p>
+        <p id="PrixLivraison" type=number> 0</p>
+        Livraison dans les 72 heures (8€ de frais) :
+        <input id="Livraison" type="radio" name="shipping" value="livraison express">Oui
+        <input id="NonLivraison" type="radio" name="shipping" value="livraison express">Non<br><br> 
+        <!--Quantité :
+        <input class="Taper-le-texte" type="number" name="quantity" min="1" max="7"><br> -->
+        Date de livraison souhaitée :
+        <input class="Taper-le-texte" type="week" name="week_year"><br><br>
+        <p>Prix Total: </p>
+        <p id="PrixTotal" type=number> 0</p><br>
+        <button>Envoyer</button><br>
+
+        <!--</form>-->
+    </div>
+
+    <div class="contenu">
+        <section id="section2">
+            <p>
+                <h4 id="ContenuPanierTitre">
+                    Contenu du Panier
+                </h4>
+            </p>
+            <h5 id="flexcontainerCommande"> 
+                Votre panier est vide  <!--Si ça marche pas-->
+            </h5>
+            <template id="listeCommande">
+                <span classe={{nom}}>{{nom}}</br><button class="ContenuPanier" onclick="SupprimeSelection('{{nom}}')">Retirer du Panier</button></br> 
+                <!--<img class="imgpres2" alt="photo_accueil" src={{image}}> </span>-->
+            </template>
+        </section>
+    </div>
+    <footer id="footer"></footer>
+
+
+
+</body>
+
+</html>

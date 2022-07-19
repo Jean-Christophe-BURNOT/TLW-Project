@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/CSS/style-accueil.css">
+    <link rel="stylesheet" href="assets/CSS/style-header.css">
+    <link rel="stylesheet" href="assets/CSS/style-footer.css">
+    <script defer src="assets/js/accueil-js.js"></script>
+    <script defer src="assets/js/fetch-h&f.js"></script>
+    <script defer src="assets/js/startAllPage.js"></script>
+</head>
+
+
+<body class="accueil">
+    <header id="header"></header>
+    <style id="background"></style>
+    <div class="contenu">
+        <h1>Accueil</h1>
+        <section id="section1">
+            <h3>
+                <img id="imgpres" alt="photo_accueil" src="Images/imageDynamique1.jpg" style="display: block;">
+            </h3>
+            <p>
+                Bienvenue sur le site de la maison de la figurine vous trouverez içi nos figurines faites main et écoresponsables. La dernière collection est entièrement personnalisable et est axée sur les thème des figurines POP.
+            </p>
+        </section>
+    </div>
+    <div class="contenu">
+        <section id="section2">
+            <p>
+                <h1>
+                    Voici les bases des figurines customisables de la dernière collection:
+                </h1>
+            </p>
+            <h3 id="flexcontainer">
+                erreur de chargement chacal
+            </h3>
+            <template id="listeFigurines">
+                <span>{{nom}}</br> <img class="imgpres2" alt="photo_accueil" src={{image}}> </span>
+            </template>
+            <a id="boutonfinal" href="products.html">Démarre ta personnalisation</a>
+        </section>
+    </div>
+    <footer id="footer"></footer>
+    <div><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button></div>
+
+
+</body>
+
+</html>

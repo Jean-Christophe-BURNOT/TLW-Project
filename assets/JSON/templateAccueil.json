@@ -1,0 +1,27 @@
+{
+    "figurines": [{
+            "name": "Axel",
+            "pic": "Images/womandiy-white-background.png"
+        },
+
+        {
+            "name": "Bergère",
+            "pic": "Images/bopeepdiy.png"
+        },
+
+        {
+            "name": "Bibendum",
+            "pic": "Images/bibendum-origine-diy.png"
+        },
+
+        {
+            "name": "Soldat",
+            "pic": "Images/warhammer.png"
+        },
+
+        {
+            "name": "Gaël",
+            "pic": "Images/mendiy-white-background.png"
+        }
+    ]
+}
